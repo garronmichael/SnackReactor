@@ -21,14 +21,18 @@ app.controller('MainCtrl', function ($scope, $http, $log, $document, ModalServic
   //used in our search function to generate results page.
   $scope.places = [];
 
-
+  // curated image library 
   var images = {
     'Chipotle Mexican Grill': 'http://upload.wikimedia.org/wikipedia/en/thumb/3/3b/Chipotle_Mexican_Grill_logo.svg/1024px-Chipotle_Mexican_Grill_logo.svg.png',
     'In-N-Out': 'http://upload.wikimedia.org/wikipedia/en/thumb/f/f2/InNOut.svg/1280px-InNOut.svg.png',
-    'California Pizza Kitchen': 'http://upload.wikimedia.org/wikipedia/en/thumb/7/73/California_Pizza_Kitchen.svg/1277px-California_Pizza_Kitchen.svg.png'
+    'California Pizza Kitchen': 'http://upload.wikimedia.org/wikipedia/en/thumb/7/73/California_Pizza_Kitchen.svg/1277px-California_Pizza_Kitchen.svg.png',
+    'Subway': 'http://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Subway_restaurant.svg/1024px-Subway_restaurant.svg.png',
+    'McDonald\'s': 'http://upload.wikimedia.org/wikipedia/commons/thumb/3/36/McDonald%27s_Golden_Arches.svg/1000px-McDonald%27s_Golden_Arches.svg.png',
+    'Burger King': 'http://upload.wikimedia.org/wikipedia/en/thumb/3/3a/Burger_King_Logo.svg/768px-Burger_King_Logo.svg.png',
+    'zpizza': 'http://zpizza.5291304.attractionsbook.com/parse/image.php?image_id=98674',
+    'Super Duper Burger': 'http://www.superdupersf.com/images/superduper_logos-1.gif'
   };
 
-  // pulls numb
   $scope.refresh = function(){
     $http.get('/api/going').then(function(res){
       // assign that data to var list
@@ -47,6 +51,7 @@ app.controller('MainCtrl', function ($scope, $http, $log, $document, ModalServic
      }
      // assigned curated restuarant list with new images to $scope.data
      $scope.data = list;
+     console.log($scope.data);
     });
   
   }
