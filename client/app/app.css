@@ -219,6 +219,10 @@ button{
     color: #fff;
 }
 
+#logout:hover {
+    color: #d9534f;
+}
+
 .modal-body{
     margin: 50px;
 }
@@ -388,6 +392,10 @@ button{
   float: right;
   margin-right: 5%;
   color: #fff;
+}
+
+.venue:hover {
+    color: #d9534f;
 }
 
 .badge {
