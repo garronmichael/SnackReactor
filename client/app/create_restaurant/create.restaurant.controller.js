@@ -26,7 +26,7 @@ app.controller('CreateRestCtrl', function ($scope, $window, $http, $location, Cr
       })
       .error(function(err){
         $scope.show = true;
-        console.error('Error: ', err);
+        $scope.errorMessage = err;
       });
   };
 

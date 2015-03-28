@@ -18,7 +18,7 @@
                     <h3> {{ createRest.name }} </h3>
                         <button type="submit" class="btn btn-primary pull-right" ng-click="addRestaurant(createRest)" ng-disabled="createRest.$invalid">Submit</button>
                         <button type="submit" class="btn btn-cancel btn-warning pull-right" ng-click="cancelButton()">Cancel</button>
-                        <div ng-show="show" class="alert alert-warning pull-left" role="alert">That venue already exists. Try another or select cancel to return home.</div>
+                        <div ng-show="show" class="alert alert-warning pull-left" role="alert">{{errorMessage}}</div>
                     </div>
                 </div>
             </form>
